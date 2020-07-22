@@ -57,7 +57,7 @@ add-highlighter shared/imba/code/ regex [$@]\w* 0:variable
 add-highlighter shared/imba/code/ regex \b(Array|Boolean|Date|Function|Number|Object|RegExp|String)\b 0:type
 add-highlighter shared/imba/code/ regex \b(document|false|no|null|off|on|parent|self|this|true|undefined|window|yes)\b 0:value
 add-highlighter shared/imba/code/ regex \b(and|is|isnt|not|or)\b 0:operator
-add-highlighter shared/imba/code/ regex \b(break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|def|if|implements|import|in|instanceof|interface|let|native|new|package|private|protected|public|return|static|super|switch|throw|try|typeof|var|void|while|with|yield)\b 0:keyword
+add-highlighter shared/imba/code/ regex \b(break|case|catch|class|tag|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|def|if|implements|import|in|instanceof|interface|let|native|new|package|private|protected|public|return|static|super|switch|throw|try|typeof|var|void|while|with|yield)\b 0:keyword
 
 # Commands
 # ‾‾‾‾‾‾‾‾
