@@ -28,6 +28,10 @@ hook -group imba-highlight global WinSetOption filetype=imba %{
 
 provide-module imba %[
 
+try %{
+  require-module html #for css and html-tag support
+}
+
 # Highlighters
 # ‾‾‾‾‾‾‾‾‾‾‾‾
 
