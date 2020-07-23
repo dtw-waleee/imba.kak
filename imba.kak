@@ -43,9 +43,9 @@ add-highlighter shared/imba/double_string     region '"' (?<!\\)(\\\\)*"        
 add-highlighter shared/imba/double_string_alt region '"""' '"""'                ref shared/imba/double_string
 add-highlighter shared/imba/regex             region '/' (?<!\\)(\\\\)*/[gimy]* regions
 add-highlighter shared/imba/regex_alt         region '///' ///[gimy]*           ref shared/imba/regex
-add-highlighter shared/imba/comment1          region '#' '$'                    fill comment
 
-add-highlighter shared/imba/comment2  region  '###' '###' fill comment
+add-highlighter shared/imba/comment  region  '###' '###' fill comment
+add-highlighter shared/imba/inlinbe_comment          region '#' '$'                    fill comment
 
 # Regular expression flags are: g → global match, i → ignore case, m → multi-lines, y → sticky
 # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
