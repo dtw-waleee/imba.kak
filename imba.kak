@@ -44,8 +44,8 @@ add-highlighter shared/imba/double_string_alt region '"""' '"""'                
 add-highlighter shared/imba/regex             region '/' (?<!\\)(\\\\)*/[gimy]* regions
 add-highlighter shared/imba/regex_alt         region '///' ///[gimy]*           ref shared/imba/regex
 
-add-highlighter shared/imba/comment  region  '###' '###' fill comment
-add-highlighter shared/imba/inlinbe_comment          region '#' '$'                    fill comment
+add-highlighter shared/imba/comment        region  '###' '###' fill comment
+add-highlighter shared/imba/inline_comment region '#' '$'      fill comment
 
 # Regular expression flags are: g → global match, i → ignore case, m → multi-lines, y → sticky
 # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
@@ -61,7 +61,7 @@ add-highlighter shared/imba/regex/interpolation region -recurse \{ \Q#{ \} fill 
 add-highlighter shared/imba/code/ regex [$@]\w* 0:variable
 add-highlighter shared/imba/code/ regex \b(Array|Boolean|Date|Function|Number|Object|RegExp|String)\b 0:type
 add-highlighter shared/imba/code/ regex \b([A-Z]\w*)\b 0:type
-add-highlighter shared/imba/code/ regex \b(tag\ \w*)\b 0:type
+add-highlighter shared/imba/code/ regex \b(tag\ \w*\n)\b 0:type
 add-highlighter shared/imba/code/ regex \b(document|false|no|null|off|on|parent|self|this|true|undefined|window|yes)\b 0:value
 add-highlighter shared/imba/code/ regex \b(and|is|isnt|not|or)\b 0:operator
 add-highlighter shared/imba/code/ regex \b(break|case|catch|class|tag|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|def|css|if|implements|import|in|instanceof|interface|let|native|new|package|private|protected|public|return|static|super|switch|throw|try|typeof|var|void|while|with|yield)\b 0:keyword
