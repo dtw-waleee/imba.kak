@@ -72,17 +72,13 @@ add-highlighter shared/imba/code/html region < > ref html
 # ‾‾‾‾‾‾‾‾
 
 define-command -hidden imba-trim-indent %{
-    evaluate-commands -draft -itersel %{
-        execute-keys <a-x>
-        # remove trailing white spaces
-        try %{ execute-keys -draft s \h + $ <ret> d }
-    }
+      try %{ execute-keys -draft -itersel <a-x> s \h+$ <ret> d }
 }
 
 define-command -hidden imba-indent-on-new-line %{
     evaluate-commands -draft -itersel %{
         # copy '#' comment prefix and following white spaces
-        try %{ execute-keys -draft k <a-x> s '^\h*\K#\h*' <ret> y gh j P }
+        try %{ execute-keys -draft k <a-x> s ^\h*\K#\h* <ret> y gh j P }
         # preserve previous line indent
         try %{ execute-keys -draft <semicolon> K <a-&> }
         # filter previous line
